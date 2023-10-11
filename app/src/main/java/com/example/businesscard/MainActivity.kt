@@ -8,8 +8,8 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
@@ -53,60 +53,65 @@ fun BusinessCardApp() {
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center
     ) {
-        Image(
-            painter = painterResource(R.drawable.android_logo),
-            contentDescription = null,
-            modifier = Modifier
-                .width(100.dp)
-                .height(100.dp)
-                .background(Color(0xFF4B5957))
-        )
-        Text(
-            text = stringResource(R.string.full_name),
-            fontSize = 40.sp,
-            fontFamily = FontFamily.Cursive,
-            modifier = Modifier.padding(6.dp)
-        )
-        Text(
-            text = stringResource(R.string.title),
-            color = Color(0xFF5BBA86),
-            fontWeight = FontWeight.Bold
-        )
-    }
-    Column(
-        horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.Bottom,
-        modifier = Modifier.padding(30.dp)
-    ) {
-        Row(modifier = Modifier.padding(6.dp)){
+        Column(
+            horizontalAlignment = Alignment.CenterHorizontally,
+            modifier = Modifier.padding(top = 200.dp)
+        ) {
             Image(
-                painter = painterResource(R.drawable.ic_action_phone),
+                painter = painterResource(R.drawable.android_logo),
                 contentDescription = null,
-                modifier = Modifier.padding(end = 6.dp)
+                modifier = Modifier
+                    .width(100.dp)
+                    .height(100.dp)
+                    .background(Color(0xFF4B5957))
             )
             Text(
-                text = stringResource(R.string.phone_number)
+                text = stringResource(R.string.full_name),
+                fontSize = 40.sp,
+                fontFamily = FontFamily.Cursive,
+                modifier = Modifier.padding(6.dp)
+            )
+            Text(
+                text = stringResource(R.string.title),
+                color = Color(0xFF5BBA86),
+                fontWeight = FontWeight.Bold
             )
         }
-        Row(modifier = Modifier.padding(6.dp)){
-            Image(
-                painter = painterResource(R.drawable.ic_action_social_media),
-                contentDescription = null,
-                modifier = Modifier.padding(end = 6.dp)
-            )
-            Text(
-                text = stringResource(R.string.social_media)
-            )
-        }
-        Row(modifier = Modifier.padding(6.dp)) {
-            Image(
-                painter = painterResource(R.drawable.ic_action_email),
-                contentDescription = null,
-                modifier = Modifier.padding(end = 6.dp)
-            )
-            Text(
-                text = stringResource(R.string.email)
-            )
+        Spacer(Modifier.height(150.dp))
+        Column(
+            verticalArrangement = Arrangement.Bottom,
+            modifier = Modifier.padding(30.dp)
+        ) {
+            Row(modifier = Modifier.padding(6.dp)){
+                Image(
+                    painter = painterResource(R.drawable.ic_action_phone),
+                    contentDescription = null,
+                    modifier = Modifier.padding(end = 6.dp)
+                )
+                Text(
+                    text = stringResource(R.string.phone_number)
+                )
+            }
+            Row(modifier = Modifier.padding(6.dp)){
+                Image(
+                    painter = painterResource(R.drawable.ic_action_social_media),
+                    contentDescription = null,
+                    modifier = Modifier.padding(end = 6.dp)
+                )
+                Text(
+                    text = stringResource(R.string.social_media)
+                )
+            }
+            Row(modifier = Modifier.padding(6.dp)) {
+                Image(
+                    painter = painterResource(R.drawable.ic_action_email),
+                    contentDescription = null,
+                    modifier = Modifier.padding(end = 6.dp)
+                )
+                Text(
+                    text = stringResource(R.string.email)
+                )
+            }
         }
     }
 }

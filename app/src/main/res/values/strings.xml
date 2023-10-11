@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Business Card</string>
+    <string name="full_name">Darryl Naufal</string>
+    <string name="title">Machine Learning Enthusiast</string>
+    <string name="phone_number">+62 000 0000 0000</string>
+    <string name="social_media">\@darryln</string>
+    <string name="email">darryl@email.com</string>
+</resources>
